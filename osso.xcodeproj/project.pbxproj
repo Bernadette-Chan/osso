@@ -19,6 +19,13 @@
 		DE8E982C18D63408004A6519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8E981418D63408004A6519 /* UIKit.framework */; };
 		DE8E983418D63408004A6519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE8E983218D63408004A6519 /* InfoPlist.strings */; };
 		DE8E983618D63408004A6519 /* ossoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8E983518D63408004A6519 /* ossoTests.m */; };
+		DE8E984018D63E05004A6519 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8E983F18D63E05004A6519 /* OpenGLES.framework */; };
+		DE8E984218D63E10004A6519 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8E984118D63E10004A6519 /* GLKit.framework */; };
+		DE8E984518D63E5C004A6519 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8E984418D63E5C004A6519 /* MainViewController.m */; };
+		DE8E984718D63EA4004A6519 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8E984618D63EA4004A6519 /* MainStoryboard.storyboard */; };
+		DE8E984F18D64BFA004A6519 /* cube.c in Sources */ = {isa = PBXBuildFile; fileRef = DE8E984E18D64BFA004A6519 /* cube.c */; };
+		DE8E985218D64F42004A6519 /* cube.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8E985118D64F42004A6519 /* cube.png */; };
+		DEC9BD4118D7A95000C29D0C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9BD4018D7A95000C29D0C /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,15 @@
 		DE8E983118D63408004A6519 /* ossoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ossoTests-Info.plist"; sourceTree = "<group>"; };
 		DE8E983318D63408004A6519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE8E983518D63408004A6519 /* ossoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ossoTests.m; sourceTree = "<group>"; };
+		DE8E983F18D63E05004A6519 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DE8E984118D63E10004A6519 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		DE8E984318D63E5C004A6519 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
+		DE8E984418D63E5C004A6519 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
+		DE8E984618D63EA4004A6519 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DE8E984A18D64767004A6519 /* cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cube.h; sourceTree = "<group>"; };
+		DE8E984E18D64BFA004A6519 /* cube.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cube.c; sourceTree = "<group>"; };
+		DE8E985118D64F42004A6519 /* cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube.png; sourceTree = "<group>"; };
+		DEC9BD4018D7A95000C29D0C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC9BD4118D7A95000C29D0C /* QuartzCore.framework in Frameworks */,
+				DE8E984218D63E10004A6519 /* GLKit.framework in Frameworks */,
+				DE8E984018D63E05004A6519 /* OpenGLES.framework in Frameworks */,
 				DE8E981318D63408004A6519 /* CoreGraphics.framework in Frameworks */,
 				DE8E981518D63408004A6519 /* UIKit.framework in Frameworks */,
 				DE8E981118D63408004A6519 /* Foundation.framework in Frameworks */,
@@ -96,6 +115,9 @@
 		DE8E980F18D63408004A6519 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEC9BD4018D7A95000C29D0C /* QuartzCore.framework */,
+				DE8E984118D63E10004A6519 /* GLKit.framework */,
+				DE8E983F18D63E05004A6519 /* OpenGLES.framework */,
 				DE8E981018D63408004A6519 /* Foundation.framework */,
 				DE8E981218D63408004A6519 /* CoreGraphics.framework */,
 				DE8E981418D63408004A6519 /* UIKit.framework */,
@@ -107,9 +129,13 @@
 		DE8E981618D63408004A6519 /* osso */ = {
 			isa = PBXGroup;
 			children = (
+				DE8E984618D63EA4004A6519 /* MainStoryboard.storyboard */,
+				DE8E984318D63E5C004A6519 /* MainViewController.h */,
+				DE8E984418D63E5C004A6519 /* MainViewController.m */,
 				DE8E981F18D63408004A6519 /* AppDelegate.h */,
 				DE8E982018D63408004A6519 /* AppDelegate.m */,
 				DE8E982218D63408004A6519 /* Images.xcassets */,
+				DE8E984B18D64B08004A6519 /* resources */,
 				DE8E981718D63408004A6519 /* Supporting Files */,
 			);
 			path = osso;
@@ -142,6 +168,32 @@
 				DE8E983218D63408004A6519 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE8E984918D64758004A6519 /* 3d */ = {
+			isa = PBXGroup;
+			children = (
+				DE8E984E18D64BFA004A6519 /* cube.c */,
+				DE8E984A18D64767004A6519 /* cube.h */,
+			);
+			name = 3d;
+			sourceTree = "<group>";
+		};
+		DE8E984B18D64B08004A6519 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE8E985018D64F27004A6519 /* images */,
+				DE8E984918D64758004A6519 /* 3d */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		DE8E985018D64F27004A6519 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DE8E985118D64F42004A6519 /* cube.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +271,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8E984718D63EA4004A6519 /* MainStoryboard.storyboard in Resources */,
 				DE8E981B18D63408004A6519 /* InfoPlist.strings in Resources */,
+				DE8E985218D64F42004A6519 /* cube.png in Resources */,
 				DE8E982318D63408004A6519 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE8E982118D63408004A6519 /* AppDelegate.m in Sources */,
+				DE8E984518D63E5C004A6519 /* MainViewController.m in Sources */,
+				DE8E984F18D64BFA004A6519 /* cube.c in Sources */,
 				DE8E981D18D63408004A6519 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +495,7 @@
 				DE8E983B18D63408004A6519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE8E983C18D63408004A6519 /* Build configuration list for PBXNativeTarget "ossoTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +504,7 @@
 				DE8E983E18D63408004A6519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
