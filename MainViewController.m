@@ -14,10 +14,6 @@
     
     GLKMatrix4 _rotationMatrix;
     
-//    float _rotateX;
-//    float _rotateY;
-//    float _rotateZ;
-    
 }
 
 @property (strong, nonatomic) GLKBaseEffect* effect;
@@ -32,11 +28,11 @@
     [super viewDidLoad];
     
     // Set up context
-    EAGLContext* context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
+    EAGLContext * context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     [EAGLContext setCurrentContext:context];
     
     // Set up view
-    GLKView* glkview = (GLKView *)self.view;
+    GLKView * glkview = (GLKView *)self.view;
     glkview.context = context;
     
     // OpennGL ES settings
@@ -47,11 +43,15 @@
     // Create effect
     [self createEffect];
     
-    // Variables
-    //_rotateX = 0.0f;
-    //_rotateY = 0.0f;
-    //_rotateZ = 0.0f;
+    // Variables"é
     _rotationMatrix = GLKMatrix4Identity;
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    
+    [super didReceiveMemoryWarning];
     
 }
 
@@ -61,10 +61,12 @@
     // Initialize
     self.effect = [[GLKBaseEffect alloc] init];
     
-    NSDictionary* options = @{ GLKTextureLoaderOriginBottomLeft: @YES };
-    NSError* error;
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"cube.png" ofType:nil];
-    GLKTextureInfo* texture = [GLKTextureLoader textureWithContentsOfFile:path options:options error:&error];
+    NSLog(@"GL Error: %u", glGetError());
+    
+    NSDictionary * options = @{ GLKTextureLoaderOriginBottomLeft: @YES };
+    NSError * error;
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"cube" ofType:@"png"];
+    GLKTextureInfo * texture = [GLKTextureLoader textureWithContentsOfFile:path options:options error:&error];
     
     if( texture == nil ){
         
@@ -119,12 +121,6 @@
     self.effect.transform.projectionMatrix = projectionMatrix;
     
     // ModelView matrix
-/*    GLKMatrix4 modelViewMatrix = GLKMatrix4Identity;
-    modelViewMatrix = GLKMatrix4Translate(modelViewMatrix, 0.0f, 0.0f, -5.0f);
-    modelViewMatrix = GLKMatrix4RotateX(modelViewMatrix, GLKMathDegreesToRadians(_rotateX));
-    modelViewMatrix = GLKMatrix4RotateY(modelViewMatrix, GLKMathDegreesToRadians(_rotateY));
-    modelViewMatrix = GLKMatrix4RotateZ(modelViewMatrix, GLKMathDegreesToRadians(_rotateZ));
-*/
     GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -5.0f);
     modelViewMatrix = GLKMatrix4Multiply(modelViewMatrix, _rotationMatrix);
     self.effect.transform.modelviewMatrix = modelViewMatrix;
@@ -151,7 +147,7 @@
     float rotationX = -1 * GLKMathDegreesToRadians(difference.y  / 2.0);
     float rotationY = -1 * GLKMathDegreesToRadians(difference.x / 2.0);
     
-    BOOL isInvertible;
+    bool isInvertible;
     GLKVector3 xAxis = GLKMatrix4MultiplyVector3(GLKMatrix4Invert(_rotationMatrix, &isInvertible), GLKVector3Make(1.0, 0.0, 0.0));
     _rotationMatrix = GLKMatrix4Rotate(_rotationMatrix, rotationX, xAxis.x, xAxis.y, xAxis.z);
     GLKVector3 yAxis = GLKMatrix4MultiplyVector3(GLKMatrix4Invert(_rotationMatrix, &isInvertible), GLKVector3Make(0.0, 1.0, 0.0));

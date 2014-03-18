@@ -24,7 +24,6 @@
 		DE8E984518D63E5C004A6519 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8E984418D63E5C004A6519 /* MainViewController.m */; };
 		DE8E984718D63EA4004A6519 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8E984618D63EA4004A6519 /* MainStoryboard.storyboard */; };
 		DE8E984F18D64BFA004A6519 /* cube.c in Sources */ = {isa = PBXBuildFile; fileRef = DE8E984E18D64BFA004A6519 /* cube.c */; };
-		DE8E985218D64F42004A6519 /* cube.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8E985118D64F42004A6519 /* cube.png */; };
 		DEC9BD4118D7A95000C29D0C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9BD4018D7A95000C29D0C /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		DE8E984618D63EA4004A6519 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DE8E984A18D64767004A6519 /* cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cube.h; sourceTree = "<group>"; };
 		DE8E984E18D64BFA004A6519 /* cube.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cube.c; sourceTree = "<group>"; };
-		DE8E985118D64F42004A6519 /* cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube.png; sourceTree = "<group>"; };
 		DEC9BD4018D7A95000C29D0C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -182,18 +180,9 @@
 		DE8E984B18D64B08004A6519 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				DE8E985018D64F27004A6519 /* images */,
 				DE8E984918D64758004A6519 /* 3d */,
 			);
 			name = resources;
-			sourceTree = "<group>";
-		};
-		DE8E985018D64F27004A6519 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				DE8E985118D64F42004A6519 /* cube.png */,
-			);
-			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +262,6 @@
 			files = (
 				DE8E984718D63EA4004A6519 /* MainStoryboard.storyboard in Resources */,
 				DE8E981B18D63408004A6519 /* InfoPlist.strings in Resources */,
-				DE8E985218D64F42004A6519 /* cube.png in Resources */,
 				DE8E982318D63408004A6519 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
