@@ -23,7 +23,10 @@
 		DE8E984218D63E10004A6519 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8E984118D63E10004A6519 /* GLKit.framework */; };
 		DE8E984518D63E5C004A6519 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8E984418D63E5C004A6519 /* MainViewController.m */; };
 		DE8E984718D63EA4004A6519 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8E984618D63EA4004A6519 /* MainStoryboard.storyboard */; };
-		DE8E984F18D64BFA004A6519 /* cube.c in Sources */ = {isa = PBXBuildFile; fileRef = DE8E984E18D64BFA004A6519 /* cube.c */; };
+		DEB89D3118DA3F4000C90059 /* flamant_rose.c in Sources */ = {isa = PBXBuildFile; fileRef = DEB89D2E18DA3F4000C90059 /* flamant_rose.c */; };
+		DEB89D3218DA3F4000C90059 /* flamant_rose.png in Resources */ = {isa = PBXBuildFile; fileRef = DEB89D3018DA3F4000C90059 /* flamant_rose.png */; };
+		DEB89D3518DA445100C90059 /* circle.c in Sources */ = {isa = PBXBuildFile; fileRef = DEB89D3318DA445100C90059 /* circle.c */; };
+		DEB89D3718DA448C00C90059 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = DEB89D3618DA448C00C90059 /* circle.png */; };
 		DEC9BD4118D7A95000C29D0C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9BD4018D7A95000C29D0C /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +62,12 @@
 		DE8E984318D63E5C004A6519 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
 		DE8E984418D63E5C004A6519 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
 		DE8E984618D63EA4004A6519 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DE8E984A18D64767004A6519 /* cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cube.h; sourceTree = "<group>"; };
-		DE8E984E18D64BFA004A6519 /* cube.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cube.c; sourceTree = "<group>"; };
+		DEB89D2E18DA3F4000C90059 /* flamant_rose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flamant_rose.c; sourceTree = "<group>"; };
+		DEB89D2F18DA3F4000C90059 /* flamant_rose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flamant_rose.h; sourceTree = "<group>"; };
+		DEB89D3018DA3F4000C90059 /* flamant_rose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flamant_rose.png; sourceTree = "<group>"; };
+		DEB89D3318DA445100C90059 /* circle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = circle.c; sourceTree = "<group>"; };
+		DEB89D3418DA445100C90059 /* circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circle.h; sourceTree = "<group>"; };
+		DEB89D3618DA448C00C90059 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		DEC9BD4018D7A95000C29D0C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -133,7 +140,7 @@
 				DE8E981F18D63408004A6519 /* AppDelegate.h */,
 				DE8E982018D63408004A6519 /* AppDelegate.m */,
 				DE8E982218D63408004A6519 /* Images.xcassets */,
-				DE8E984B18D64B08004A6519 /* resources */,
+				DEB89D2D18DA3F4000C90059 /* models */,
 				DE8E981718D63408004A6519 /* Supporting Files */,
 			);
 			path = osso;
@@ -168,21 +175,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DE8E984918D64758004A6519 /* 3d */ = {
+		DEB89D2D18DA3F4000C90059 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				DE8E984E18D64BFA004A6519 /* cube.c */,
-				DE8E984A18D64767004A6519 /* cube.h */,
+				DEB89D3318DA445100C90059 /* circle.c */,
+				DEB89D3418DA445100C90059 /* circle.h */,
+				DEB89D3618DA448C00C90059 /* circle.png */,
+				DEB89D2E18DA3F4000C90059 /* flamant_rose.c */,
+				DEB89D2F18DA3F4000C90059 /* flamant_rose.h */,
+				DEB89D3018DA3F4000C90059 /* flamant_rose.png */,
 			);
-			name = 3d;
-			sourceTree = "<group>";
-		};
-		DE8E984B18D64B08004A6519 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				DE8E984918D64758004A6519 /* 3d */,
-			);
-			name = resources;
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +263,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE8E984718D63EA4004A6519 /* MainStoryboard.storyboard in Resources */,
-				DE8E981B18D63408004A6519 /* InfoPlist.strings in Resources */,
 				DE8E982318D63408004A6519 /* Images.xcassets in Resources */,
+				DE8E984718D63EA4004A6519 /* MainStoryboard.storyboard in Resources */,
+				DEB89D3718DA448C00C90059 /* circle.png in Resources */,
+				DEB89D3218DA3F4000C90059 /* flamant_rose.png in Resources */,
+				DE8E981B18D63408004A6519 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE8E982118D63408004A6519 /* AppDelegate.m in Sources */,
+				DEB89D3518DA445100C90059 /* circle.c in Sources */,
+				DEB89D3118DA3F4000C90059 /* flamant_rose.c in Sources */,
 				DE8E984518D63E5C004A6519 /* MainViewController.m in Sources */,
-				DE8E984F18D64BFA004A6519 /* cube.c in Sources */,
 				DE8E981D18D63408004A6519 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
