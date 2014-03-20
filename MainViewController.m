@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "cube.h"
+#import "flamant_rose.h"
 
 @interface MainViewController()
 {
@@ -65,7 +65,7 @@
     
     NSDictionary * options = @{ GLKTextureLoaderOriginBottomLeft: @YES };
     NSError * error;
-    NSString * path = [[NSBundle mainBundle] pathForResource:@"cube" ofType:@"png"];
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"flamant_rose" ofType:@"png"];
     GLKTextureInfo * texture = [GLKTextureLoader textureWithContentsOfFile:path options:options error:&error];
     
     if( texture == nil ){
@@ -96,18 +96,18 @@
     
     // Positions
     glEnableVertexAttribArray(GLKVertexAttribPosition);
-    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 0, cubePositions);
+    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 0, flamant_rosePositions);
     
     // Texels
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
-    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, cubeTexels);
+    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, flamant_roseTexels);
     
     // Normals
     glEnableVertexAttribArray(GLKVertexAttribNormal);
-    glVertexAttribPointer(GLKVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, 0, cubeNormals);
+    glVertexAttribPointer(GLKVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, 0, flamant_roseNormals);
     
     // Draw model
-    glDrawArrays(GL_TRIANGLES, 0, cubeVertices);
+    glDrawArrays(GL_TRIANGLES, 0, flamant_roseVertices);
     
 }
 
